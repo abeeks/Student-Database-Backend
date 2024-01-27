@@ -10,12 +10,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.NaturalId;
 
-@Entity
+@Entity //Marks a Java class as a JPA (Java Persistence API) entity. Represents a table in a relational database.
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Student {
+    //primary ID for the student that is automatically generated
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
